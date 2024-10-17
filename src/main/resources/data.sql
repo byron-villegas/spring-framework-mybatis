@@ -1,0 +1,1 @@
+INSERT INTO PERSON(RUT, NAMES, SURNAMES, AGE) VALUES('18.699.827-8', 'Byron Stevens', 'Villegas Moya', 25);

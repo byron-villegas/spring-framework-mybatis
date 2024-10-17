@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ejemplo" pageWidth="700" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="700" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="6adf93d0-02ea-400a-aef1-25b3d01ab1ae">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="REPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[Directorio de los reportes]]></parameterDescription>
+		<defaultValueExpression><![CDATA["./reports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGE_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[Directorio de las imagenes]]></parameterDescription>
+		<defaultValueExpression><![CDATA["./images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RUT" class="java.lang.String">
+		<parameterDescription><![CDATA[Rut de la persona]]></parameterDescription>
+	</parameter>
+	<parameter name="NOMBRES" class="java.lang.String">
+		<parameterDescription><![CDATA[Nombres de la persona]]></parameterDescription>
+	</parameter>
+	<parameter name="APELLIDOS" class="java.lang.String">
+		<parameterDescription><![CDATA[Apellidos de la persona]]></parameterDescription>
+	</parameter>
+	<parameter name="EDAD" class="java.lang.Byte">
+		<parameterDescription><![CDATA[Edad de la persona]]></parameterDescription>
+	</parameter>
+	<summary>
+		<band height="321">
+			<rectangle>
+				<reportElement x="20" y="24" width="652" height="259" uuid="ca429425-a694-4a7b-9605-146872352b2f"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="106" y="58" width="156" height="24" uuid="6d360b79-8db0-428e-9bd6-c653f06f4d50"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RUT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="48" y="58" width="46" height="25" uuid="e2856f3b-8076-4840-8b5d-2022b15d5191"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[RUT:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="97" width="102" height="25" uuid="1fa3a65d-8b77-4e77-8dc2-4a9f1512d7a0"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[NOMBRES:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="163" y="97" width="222" height="25" uuid="8a7b5b92-0a09-43c8-b4eb-c77153fb280f"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOMBRES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="48" y="140" width="115" height="25" uuid="04b50bb4-df57-400c-8ba9-43ae94830162"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[APELLIDOS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="179" y="140" width="206" height="25" uuid="aef956f9-f31e-4afa-b80d-d2f50a478a07"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APELLIDOS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="48" y="185" width="58" height="25" uuid="7edc0ab4-a115-4c0e-a5c2-dee65e4c9b2b"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Edad:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="121" y="185" width="97" height="25" uuid="2b66aba2-e929-4d11-ac25-8a34ba2f9d0c"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EDAD}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RealSize" hAlign="Center" vAlign="Middle">
+				<reportElement x="428" y="48" width="227" height="203" uuid="559fa774-bb68-4cb4-bed3-ed727935c4a4"/>
+				<imageExpression><![CDATA[$P{IMAGE_DIR}+"Avatar.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</summary>
+</jasperReport>

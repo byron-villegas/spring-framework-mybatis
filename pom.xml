@@ -1,0 +1,260 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cl.villegas</groupId>
+	<artifactId>spring-framework-mybatis</artifactId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<name>Spring Framework MyBatis</name>
+	<description>Spring Framework MyBatis</description>
+	<properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.7</java.version>
+		<springframework.version>4.3.5.RELEASE</springframework.version>
+		<spring-boot-actuator.version>1.3.5.RELEASE</spring-boot-actuator.version>
+		<h2.version>1.4.196</h2.version>
+		<javax.servlet-api.version>3.0.1</javax.servlet-api.version>
+		<commons-fileupload.version>1.3.2</commons-fileupload.version>
+		<commons-dbcp.version>1.4</commons-dbcp.version>
+		<commons-pool.version>1.6</commons-pool.version>
+		<org.mybatis.version>3.4.6</org.mybatis.version>
+		<mybatis-spring.version>1.3.2</mybatis-spring.version>
+		<joda-time.version>2.7</joda-time.version>
+		<jackson.version>2.7.5</jackson.version>
+		<jasperreports.version>5.6.0</jasperreports.version>
+		<bouncycastle.version>1.54</bouncycastle.version>
+		<itext.version>2.1.7</itext.version>
+		<log4j.version>1.2.17</log4j.version>
+        <javax-mail.version>1.4</javax-mail.version>
+		<freemarker.version>2.3.23</freemarker.version>
+		<swagger.version>2.9.2</swagger.version>
+		<junit.version>4.0</junit.version>
+	</properties>
+	<dependencies>
+		<!-- Begin Spring Core -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<!-- End Spring Core -->
+		<!-- Begin Spring Web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<!-- End Spring Web -->
+		<!-- Begin Spring Web MVC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<!-- End Spring Web MVC-->
+		<!-- Begin Spring JDBC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<!-- End Spring JDBC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<!-- Begin Spring Boot Actuator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-actuator</artifactId>
+			<version>${spring-boot-actuator.version}</version>
+		</dependency>
+		<!-- End Spring Boot Actuator -->
+		<!-- Begin H2 Database -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2.version}</version>
+		</dependency>
+		<!-- End H2 Database -->
+		<!-- Begin Javax Servlet Api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet-api.version}</version>
+		</dependency>
+		<!-- End Javax Servlet Api -->
+		<!-- Begin Commons FileUpload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons-fileupload.version}</version>
+		</dependency>
+		<!-- End Commons FileUpload -->
+		<!-- Begin Commons DBCP -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${commons-dbcp.version}</version>
+		</dependency>
+		<!-- End Commons DBCP -->
+		<!-- Begin Commons Pool -->
+		<dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+			<version>${commons-pool.version}</version>
+		</dependency>
+		<!-- End Commons Pool -->
+		<!-- Begin Mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${org.mybatis.version}</version>
+		</dependency>
+		<!-- End Mybatis -->
+		<!-- Begin Mybatis Spring -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis-spring.version}</version>
+		</dependency>
+		<!-- End Mybatis Spring -->
+		<!-- Begin Joda Time -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda-time.version}</version>
+		</dependency>
+		<!-- End Joda Time -->
+		<!-- Begin Jackson Databind  -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<!-- End Jackson Databind-->
+		<!-- Begin Jasper Reports -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>${jasperreports.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>xml-apis</groupId>
+					<artifactId>xml-apis</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.lowagie</groupId>
+					<artifactId>itext</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.olap4j</groupId>
+					<artifactId>olap4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- End Jasper Reports -->
+		<!-- Begin Bouncy Castle -->
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk15on</artifactId>
+			<version>${bouncycastle.version}</version>
+		</dependency>
+		<!-- End Bouncy Castle -->
+		<!-- Begin Itext -->
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>${itext.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>bouncycastle</groupId>
+					<artifactId>bcprov-jdk14</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.bouncycastle</groupId>
+					<artifactId>bcmail-jdk14</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.bouncycastle</groupId>
+					<artifactId>bcprov-jdk14</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- End Itext -->
+		<!-- Begin Log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<!-- End Log4j -->
+		<!-- Begin Javax Email -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${javax-mail.version}</version>
+		</dependency>
+		<!-- End Javax Email -->
+		<!-- Begin Free Marker -->
+       <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
+		<!-- End Free Marker -->
+		<!-- Begin Swagger2 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<!-- End Swagger2 -->
+		<!-- Begin Swagger UI -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<!-- End Swagger UI -->
+		<!-- Begin JUnit -->
+		<dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>${junit.version}</version>
+    		<scope>test</scope>
+		</dependency>
+		<!-- End JUnit -->
+	</dependencies>
+	<build>
+		<finalName>spring-framework-mybatis</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.3</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+						<warSourceDirectory>src/main/webapp</warSourceDirectory>
+						<warName>springframework-mybatis</warName>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
